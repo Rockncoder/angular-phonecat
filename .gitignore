@@ -9,3 +9,5 @@ bower_components/
 app/**/*.map
 app/**/*.js
 
+# we should version control systemjs
+!app/systemjs.config.js

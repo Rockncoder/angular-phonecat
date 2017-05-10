@@ -5,6 +5,22 @@
   "description": "A tutorial application for AngularJS",
   "repository": "https://github.com/angular/angular-phonecat",
   "license": "MIT",
+  "dependencies": {
+    "@angular/common": "~4.0.0",
+    "@angular/compiler": "~4.0.0",
+    "@angular/core": "~4.0.0",
+    "@angular/forms": "~4.0.0",
+    "@angular/http": "~4.0.0",
+    "@angular/platform-browser": "~4.0.0",
+    "@angular/platform-browser-dynamic": "~4.0.0",
+    "@angular/router": "~4.0.0",
+
+    "angular-in-memory-web-api": "~0.3.0",
+    "systemjs": "0.19.40",
+    "core-js": "^2.4.1",
+    "rxjs": "5.0.1",
+    "zone.js": "^0.8.4"
+  },
   "devDependencies": {
     "@types/angular": "^1.6.17",
     "@types/angular-animate": "^1.5.6",
