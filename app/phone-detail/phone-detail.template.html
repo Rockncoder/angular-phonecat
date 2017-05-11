@@ -2,13 +2,13 @@
   <div class="phone-images">
     <img [src]="img" class="phone"
          [ngClass]="{selected: img === mainImageUrl}"
-         *ngFor="let img of phone.images"/>
+         *ngFor="let img of phone.images" />
   </div>
   <h1>{{phone.name}}</h1>
   <p>{{phone.description}}</p>
   <ul class="phone-thumbs">
     <li *ngFor="let img of phone.images">
-      <img [src]="img" (click)="setImage(img)"/>
+      <img [src]="img" (click)="setImage(img)" />
     </li>
   </ul>
   <ul class="specs">
@@ -49,9 +49,9 @@
         <dt>Bluetooth</dt>
         <dd>{{phone.connectivity?.bluetooth}}</dd>
         <dt>Infrared</dt>
-        <dd>{{phone.connectivity?.infrared }}</dd>
+        <dd>{{phone.connectivity?.infrared}}</dd>
         <dt>GPS</dt>
-        <dd>{{phone.connectivity?.gps }}</dd>
+        <dd>{{phone.connectivity?.gps}}</dd>
       </dl>
     </li>
     <li>
@@ -80,7 +80,7 @@
         <dt>Screen resolution</dt>
         <dd>{{phone.display?.screenResolution}}</dd>
         <dt>Touch screen</dt>
-        <dd>{{phone.display?.touchScreen }}</dd>
+        <dd>{{phone.display?.touchScreen}}</dd>
       </dl>
     </li>
     <li>
@@ -93,9 +93,9 @@
         <dt>Audio / headphone jack</dt>
         <dd>{{phone.hardware?.audioJack}}</dd>
         <dt>FM Radio</dt>
-        <dd>{{phone.hardware?.fmRadio }}</dd>
+        <dd>{{phone.hardware?.fmRadio}}</dd>
         <dt>Accelerometer</dt>
-        <dd>{{phone.hardware?.accelerometer }}</dd>
+        <dd>{{phone.hardware?.accelerometer}}</dd>
       </dl>
     </li>
     <li>
