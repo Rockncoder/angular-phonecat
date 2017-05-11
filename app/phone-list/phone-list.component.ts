@@ -1,11 +1,18 @@
-class PhoneListController {
-  phones: any[];
-  orderProp: string;
-  query: string;
-  static $inject = ['Phone'];
+declare const angular: angular.IAngularStatic;
+import {Phone} from '../core/phone/phone.service';
+import {PhoneData} from '../core/phone/PhoneData';
 
-  constructor(Phone: any) {
-    this.phones = Phone.query();
+class PhoneListController {
+  phones: PhoneData[];
+  orderProp: string;
+
+  // Without annotations this stuff can look pretty ugly
+  static $inject = ['phone'];
+
+  constructor(phone: Phone) {
+    phone.query().subscribe(phones => {
+      this.phones = phones;
+    });
     this.orderProp = 'age';
   }
 }

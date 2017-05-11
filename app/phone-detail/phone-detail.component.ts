@@ -1,20 +1,25 @@
+declare const angular: angular.IAngularStatic;
+import {Phone} from '../core/phone/phone.service';
+import {PhoneData} from '../core/phone/PhoneData';
+
 class PhoneDetailController {
-  phone: any;
+  phone: PhoneData;
   mainImageUrl: string;
-  static $inject = ['$routeParams', 'Phone'];
-  constructor($routeParams: angular.route.IRouteParamsService, Phone: any) {
+  static $inject = ['$routeParams', 'phone'];
+
+  constructor($routeParams: angular.route.IRouteParamsService, phone: Phone) {
     let phoneId = $routeParams['phoneId'];
-    this.phone = Phone.get({phoneId}, (phone: any) => {
-      this.setImage(phone.images[0]);
+    phone.get(phoneId).subscribe(data => {
+      this.phone = data;
+      this.setImage(data.images[0]);
     });
   }
+
   setImage(imageUrl: string) {
     this.mainImageUrl = imageUrl;
   }
 }
-angular.
-module('phoneDetail').
-component('phoneDetail', {
+angular.module('phoneDetail').component('phoneDetail', {
   templateUrl: 'phone-detail/phone-detail.template.html',
   controller: PhoneDetailController
 });
