@@ -34,11 +34,6 @@
       app: {
         main: './main.js',
         defaultExtension: 'js'
-        // meta: {
-        //   './*.js': {
-        //     loader: 'systemjs-angular-loader.js'
-        //   }
-        // }
       },
       rxjs: {
         defaultExtension: 'js'
